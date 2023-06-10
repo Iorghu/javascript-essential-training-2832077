@@ -22,3 +22,9 @@ const backpack = {
 };
 
 console.log("The backpack object:", backpack);
+console.log("The pocketnumber is:", backpack.pocketNum);
+console.log("the pocketNum value as bracket", backpack["pocketNum"]);
+const query = "pocketNum";
+console.log("the pocketNum value as bracket-query", backpack[query]);
+console.log("Strap length L:", backpack.strapLength.left);
+console.log(`trying out template string Converter for the ${1}. time`);
