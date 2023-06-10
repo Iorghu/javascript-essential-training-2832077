@@ -7,7 +7,7 @@ const mug = {
   isEmpty: function () {
     return this.content === 0;
   },
-  status: function () {
+  status() {
     // if (this.isEmpty) return "empty"; // method was not called, but function was always true.
     if (this.isEmpty()) return "empty";
     if (!this.isEmpty) console.log("!this.isEmpty is truthy");
