@@ -25,6 +25,13 @@ const book = {
   difficulty: "easy",
   numberOfPages: 0o11, // 9
   worthWile: true,
+  increaseDifficulty() {
+    if (this.difficulty == "medium") this.difficulty = "hard";
+    if (this.difficulty == "easy") this.difficulty = "medium";
+  },
 };
 console.log(`my favorite book is: ${book.title}`);
 console.log(`my favorite book is not: ${book}`);
+
+const testObject = {};
+console.log(testObject);
