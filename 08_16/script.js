@@ -10,7 +10,6 @@ import backpackObjectArray from "./components/data.js";
 
 const createElement = (everydayPack) => {
   return `
-  <article class="${everydayPack.id}>
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
     </figure>
@@ -35,13 +34,13 @@ const createElement = (everydayPack) => {
       <li class="feature backpack__lid">Lid status:<span> ${
         everydayPack.lidOpen ? "open" : "closed"
       }</span></li>
-    </ul>
-    </article>`;
+    </ul>`;
 };
 
 const mapPack = backpackObjectArray.map(pack => {
   const packbagArticle = document.createElement("article");
   packbagArticle.id = pack.id;
+  packbagArticle.classList.add("backpack");
   packbagArticle.innerHTML = createElement(pack);
   return packbagArticle;
 });
