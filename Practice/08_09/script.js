@@ -27,6 +27,7 @@ const frogpack = {
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
+  description: "A brilliant backpack design!",
   newStrapLength: function (lengthLeft, lengthRight) {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
@@ -57,3 +58,36 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+const createContent = () => {
+  console.log("in Main function");
+  const articleElement = document.createElement("article");
+  console.log(articleElement);
+  articleElement.innerHTML = content;
+  return articleElement;
+};
+
+const createImage = function (data) {
+  const myFigure = document.createElement("figure");
+
+  const image = document.createElement("img");
+  image.setAttribute("src", data.image);
+  myFigure.appendChild(image);
+
+  const myCaption = document.createElement("figcaption");
+  myCaption.innerText= data.description;
+  myFigure.appendChild(myCaption);
+
+  // image.setAttribute("figcaption", "a picture of a frog");
+  // image.append(myCaption);
+  return myFigure;
+};
+
+const main = () => {
+  // createContent
+  document.querySelector("main").appendChild(createContent());
+  document.querySelector("main").appendChild(createImage(frogpack));
+};
+// createContent();
+main();
+// console.log("hmmmm");
