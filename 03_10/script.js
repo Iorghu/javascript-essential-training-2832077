@@ -30,3 +30,5 @@ class MyMug { // declaration of MyMug has indeed to be above initialization
 const myMug = new MyMug(200);
 console.log(myMug);
 
+// next Line is prohibited by Lint?
+// MyMug = 3;
