@@ -6,21 +6,24 @@
  * - Append each backpack object to the <main> element.
  */
 import Backpack from "./components/Backpack.js";
+import backpackObjectArray from "./components/data.js";
 
-const everydayPack = new Backpack(
-  "pack01",
-  "Everyday Backpack",
-  30,
-  "grey",
-  15,
-  26,
-  26,
-  false,
-  "December 5, 2018 15:00:00 PST",
-  "../assets/images/everyday.svg"
-);
+// const everydayPack = new Backpack(
+//   "pack01",
+//   "Everyday Backpack",
+//   30,
+//   "grey",
+//   15,
+//   26,
+//   26,
+//   false,
+//   "December 5, 2018 15:00:00 PST",
+//   "../assets/images/everyday.svg"
+// );
 
-const content = `
+backpackObjectArray.forEach((everydayPack) => {
+  const content = `
+  <article class="${everydayPack.id}>
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
     </figure>
@@ -46,14 +49,16 @@ const content = `
         everydayPack.lidOpen ? "open" : "closed"
       }</span></li>
     </ul>
+    </article>
   
 `;
 
-const main = document.querySelector(".maincontent");
+  const main = document.querySelector(".maincontent");
 
-const newArticle = document.createElement("article");
-newArticle.classList.add("backpack");
-newArticle.setAttribute("id", "everyday");
-newArticle.innerHTML = content;
+  const newArticle = document.createElement("article");
+  newArticle.classList.add("backpack");
+  newArticle.setAttribute("id", "everyday");
+  newArticle.innerHTML = content;
 
-main.append(newArticle);
+  main.append(newArticle);
+});
