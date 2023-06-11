@@ -38,6 +38,10 @@ const nestedObjects = {
   },
 };
 
+nestedObjects.array.forEach(element => {
+  console.log(element);
+});
+
 const article = document.querySelector("article");
 let stuffList = document.createElement("ul");
 
