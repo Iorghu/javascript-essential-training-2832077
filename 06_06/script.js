@@ -34,6 +34,7 @@ const objectDemo = {
   dance: "Mambo",
   number: 5,
 };
+objectDemo.someBoolean = true;
 console.log("Object:", objectDemo);
 
 // Array:
