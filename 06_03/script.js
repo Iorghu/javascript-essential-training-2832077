@@ -8,12 +8,14 @@ var color = "purple";
 document.querySelector(".left").style.backgroundColor = color;
 document.querySelector(".left .color-value").innerHTML = color;
 
-document.querySelector(".right").style.backgroundColor = color;
+headingColor();
+document.querySelector(".right").style.backgroundColor = color; // why is the right box now green?
 document.querySelector(".right .color-value").innerHTML = color;
 
-// function headingColor() {
-//   color = "blue";
-//   document.querySelector(".title").style.color = color;
-// }
+function headingColor() {
+    color = "blue";
+    document.querySelector(".title").style.color = color;
+    
+    let color = "red";
+}
 
-// headingColor();
