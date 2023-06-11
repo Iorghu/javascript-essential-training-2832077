@@ -31,7 +31,7 @@ const content = `
         everydayPack.volume
       }l</span></li>
       <li class="backpack__color">Color:<span> ${everydayPack.color}</span></li>
-      <li class="backpack__age">Age:<span> ${everydayPack.backpackAge()} days old</span></li>
+      <li class="backpack__color">Age:<span> ${everydayPack.backpackAge()} days old</span></li>
       <li class="backpack__pockets">Number of pockets:<span> ${
         everydayPack.pocketNum
       }</span></li>
