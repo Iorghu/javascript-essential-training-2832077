@@ -52,7 +52,20 @@ const newStrapLength = (strapArray) => {
       <input type="number" name="${side}Length" placeholder="New ${side} length">
       <button>Update</button>
     `;
+    // strapButton.addEventListener()
+    lengthForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      console.log(
+        "lengthform...",
+        (lengthForm.parentElement.querySelector("span").innerText = `${
+          lengthForm.querySelector("input").value
+        } inches`)
+      );
 
+      // console.log("lengthform.input = ", lengthForm);
+      // console.log("lengthform.submitevent: ", e);
+      // console.log("lengthform...", document.querySelector(".backpack__strap"));
+    });
     // Add form to the end of the list element
     listElement.append(lengthForm);
   });
@@ -112,3 +125,12 @@ const main = document.querySelector(".maincontent");
 backpackList.forEach((backpack) => {
   main.append(backpack);
 });
+
+const myButton = document.querySelector("button");
+myButton.addEventListener("click", (e) => {
+  console.log("my Button clicked");
+  console.log(
+    (document.querySelector(".backpack__strap span").innerText = "12")
+  );
+});
+console.log(myButton);
